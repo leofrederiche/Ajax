@@ -1,0 +1,8 @@
+<h1>Hello World</h1>
+
+<%= link_to "New User", new_user_path %>
+
+<% @users.each do |user| %>
+	<p><%= user.name %> <%= link_to "delete", delete_user_path(user.id), method: :delete, 
+			data: {confirm: "Tem certeza?"}, romote: true, class: "delete_user" %></p>
+<% end %>
